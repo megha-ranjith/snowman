@@ -1,0 +1,106 @@
+/* General Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    min-height: 100vh;
+    position: relative;
+    background: url('https://t3.ftcdn.net/jpg/01/83/28/86/360_F_183288609_fXtejjyDNOg3uKLfgWDKteEEHYDtW3C2.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Snowfall Effect */
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snow .flake {
+    position: absolute;
+    background-color: white;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: snowfall 10s linear infinite;
+}
+
+.snow .large-flake {
+    position: absolute;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: snowfall 10s linear infinite;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Snowman Styling */
+#snowman {
+    background-repeat: no-repeat;
+    width: 30em;
+    height: 30em;
+    background-image:
+        radial-gradient(ellipse, black 46%, transparent 50%),
+        radial-gradient(ellipse, silver 20%, slategray 35%, DarkSlateGray 45%, black 50%, transparent 50%),
+        linear-gradient(black, black),
+        radial-gradient(ellipse, silver 20%, slategray 35%, DarkSlateGray 45%, black 50%, transparent 50%),
+        radial-gradient(ellipse, black 47%, transparent 50%),
+        linear-gradient(#db2228, #db2228),
+        linear-gradient(40deg, transparent 49.5%, #db2228 50%, #db2228 53.5%, transparent 54%),
+        radial-gradient(circle, #db2228 41%, transparent 50%),
+        radial-gradient(circle, #db2228 41%, transparent 50%),
+        linear-gradient(-130deg, tomato 20%, transparent 21%),
+        radial-gradient(circle, black 41%, transparent 50%),
+        radial-gradient(circle, black 41%, transparent 50%),
+        radial-gradient(circle, black 41%, transparent 50%),
+        radial-gradient(circle, black 41%, transparent 50%),
+        radial-gradient(circle, black 41%, transparent 50%),
+        radial-gradient(circle, Snow 30%, #ededed 49%, transparent 50%),
+        radial-gradient(circle, Snow 30%, #ededed 49%, transparent 50%),
+        radial-gradient(circle, Snow 30%, #ededed 49%, transparent 50%),
+        linear-gradient(30deg, transparent 49%, black 50%, black 53%, transparent 54%),
+        linear-gradient(-30deg, transparent 49%, black 50%, black 53%, transparent 54%),
+        linear-gradient(50deg, transparent 49%, black 50%, black 53%, transparent 54%),
+        linear-gradient(10deg, transparent 49%, black 50%, black 53%, transparent 54%),
+        linear-gradient(120deg, transparent 49%, black 50%, black 53%, transparent 54%),
+        linear-gradient(177deg, transparent 49%, black 50%, black 53%, transparent 54%);
+    background-size:
+        20% 5%, 20% 5%, 14% 12%, 20% 5%, 30% 5%, 16% 3%, 6% 65%, 4.5% 4.5%, 4.5% 4.5%, 5% 10%, 3% 3%, 3% 3%,
+        3% 3%, 3% 3%, 3% 3%, 30% 30%, 40% 40%, 50% 50%, 15% 15%, 15% 15%, 16% 5%, 5% 15%, 14% 5%, 5% 15%;
+    background-position:
+        50% 12%, 50% 12.75%, 50% 16%, 50% 24%, 50% 26%, 50% 44.5%, 55% 45.5%, 42% 44.5%, 57.75% 44.5%, 49% 40%,
+        53% 32%, 47% 32%, 50%, 50% 55%, 50% 60%, 50% 30%, 50% 60%, 50% 110%, 25% 50%, 75% 50%, 20% 46%, 23% 48%,
+        80% 45%, 78% 47%;
+}
+
+/* Santa Hat Styling */
+.santa-hat {
+    position: absolute;
+    top: 20%;
+    left: 48.5%;
+    transform: translateX(-50%);
+    width: 11%;
+    height: auto;
+    z-index: 10;
+}
