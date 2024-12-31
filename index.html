@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowman with Snowfall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="snowman">
+        <!-- Santa Hat Image -->
+        <img src="https://cdn.pixabay.com/photo/2015/12/11/05/00/santa-hat-1087651_1280.png" alt="Santa Hat" class="santa-hat">
+    </div>
+    <div class="snow">
+        <!-- Original Snowflakes -->
+        <div class="flake" style="left: 20%; animation-duration: 12s; animation-delay: 0s;"></div>
+        <div class="flake" style="left: 50%; animation-duration: 14s; animation-delay: 2s;"></div>
+
+        <!-- Additional Snowflakes -->
+        <script>
+            const snowContainer = document.querySelector('.snow');
+            for (let i = 0; i < 40; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add(i % 2 === 0 ? 'large-flake' : 'flake');
+                snowflake.style.left = Math.random() * 100 + '%';
+                snowflake.style.animationDuration = Math.random() * 5 + 8 + 's';
+                snowflake.style.animationDelay = Math.random() * 5 + 's';
+                snowContainer.appendChild(snowflake);
+            }
+        </script>
+    </div>
+</body>
+
+</html>
