@@ -9,7 +9,7 @@ A simple webpage showcasing a snowman with a snowfall effect. The project combin
 
 ## 🚀 Usage  
 1. 📥 Clone or download the repository.  
-2. 🌐 Open `index.html` in any browser to view the project.  
+2. 🌐 Open `index.html` in any browser to view the project.
 
 ## 💻 Technologies Used  
 - 🖋️ **HTML**  
